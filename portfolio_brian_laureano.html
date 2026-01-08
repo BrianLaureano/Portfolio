@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brian Laureano | Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; }
+
+    body {
+      background: #ffffff;
+      color: #1d1d1f;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: #0066cc; }
+
+    header {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(180deg, #f5f5f7 0%, #ffffff 100%);
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      color: #6e6e73;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    section {
+      padding: 100px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      margin-bottom: 40px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      color: #333336;
+      max-width: 800px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
+
+    .card {
+      background: #f5f5f7;
+      border-radius: 24px;
+      padding: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .card p {
+      color: #6e6e73;
+      font-size: 1rem;
+    }
+
+    .projects .card {
+      background: #ffffff;
+      border: 1px solid #e5e5e7;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #0066cc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      color: #6e6e73;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.4rem; }
+      h2 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>Brian Laureano</h1>
+      <p>Transformo dados em decisões estratégicas através de dashboards, planilhas e análise de performance.</p>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>Sobre mim</h2>
+    <p>
+      Sou formado em Administração e atuo com foco em análise de dados, criação de dashboards em Power BI e desenvolvimento de planilhas em Excel.
+      Tenho experiência prática com controle de estoque, acompanhamento de importações, indicadores operacionais e relatórios gerenciais.
+      <br><br>
+      Meu diferencial está em unir visão analítica com entendimento de negócio: não faço relatório por fazer, eu organizo informações para facilitar decisões,
+      melhorar processos e dar clareza para a gestão. Gosto de ambientes dinâmicos, onde dados precisam virar ação.
+    </p>
+  </section>
+
+  <section class="experience">
+    <h2>Experiência</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Kyocera – Inventory Control & Importação (Estágio)</h3>
+        <p>
+          Atuação no controle de estoque, acompanhamento de pedidos internacionais, atualização de bases, suporte a relatórios e indicadores da área.
+          Contato direto com dados de importação, prazos, volumes e organização de informações para tomada de decisão.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Assistente de Vendas</h3>
+        <p>
+          Apoio ao time comercial, organização de informações, acompanhamento de pedidos, indicadores de performance e suporte administrativo.
+          Forte interação com dados, clientes e processos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills">
+    <h2>O que eu faço</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Dashboards em Power BI</h3>
+        <p>Criação de painéis interativos com KPIs, análise de vendas, estoque, performance e acompanhamento de resultados.</p>
+      </div>
+      <div class="card">
+        <h3>Planilhas em Excel</h3>
+        <p>Automação de controles, organização de dados, relatórios gerenciais e análises para suporte à decisão.</p>
+      </div>
+      <div class="card">
+        <h3>Suprimentos & Administração</h3>
+        <p>Controle de pedidos, acompanhamento de importações, indicadores operacionais e apoio à área de compras.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2>Projetos</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Dashboard de Vendas</h3>
+        <p>Análise por região, vendedor, produto e período, com foco em faturamento, volume e rentabilidade.</p>
+        <a href="Vendas_Brian.xlsx" class="btn">Baixar base de dados →</a>
+      </div>
+      <div class="card">
+        <h3>Controle de Estoque</h3>
+        <p>Planilha automatizada para entradas, saídas, saldo em tempo real e alerta de reposição.</p>
+        <a href="Controle_Estoque_Brian.xlsx" class="btn">Baixar planilha →</a>
+      </div>
+      <div class="card">
+        <h3>Dashboard de Importações</h3>
+        <p>Acompanhamento de pedidos, status, lead time e custos de importação em Power BI.</p>
+        <a href="Controle_Estoque_Brian.xlsx" class="btn">Baixar planilha →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contato</h2>
+    <p>Email: seuemail@email.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com" target="_blank">linkedin.com/in/seuperfil</a></p>
+  </section>
+
+  <footer>
+    <p>© 2026 Brian Laureano. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
