@@ -1,0 +1,103 @@
+.events {
+  padding-block: var(--section);
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.head h2 {
+  max-width: 22ch;
+}
+
+.head .lede {
+  text-align: center;
+}
+
+.bento {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(14px, 1.8vw, 24px);
+  margin-top: clamp(36px, 5vw, 58px);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: clamp(14px, 1.6vw, 20px);
+  border-radius: var(--r-lg);
+  background: var(--panel);
+  box-shadow: var(--sh-1);
+}
+
+.card p {
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+  max-width: 44ch;
+}
+
+.card h3 {
+  margin-top: 4px;
+  padding-inline: 6px;
+}
+
+.card > p {
+  padding-inline: 6px;
+  padding-bottom: 10px;
+}
+
+.media {
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+
+/* Card largo: texto à esquerda, foto à direita */
+.wide {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: stretch;
+  gap: clamp(16px, 3vw, 44px);
+}
+
+.wideCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  flex: 1;
+  padding: clamp(14px, 2vw, 30px) 6px clamp(10px, 1.5vw, 20px);
+}
+
+.wideCopy a {
+  margin-top: auto;
+}
+
+.wideMedia {
+  flex: 1;
+  min-height: 240px;
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+
+@media (max-width: 780px) {
+  .bento {
+    grid-template-columns: 1fr;
+  }
+
+  .wide {
+    flex-direction: column;
+  }
+
+  .wideCopy a {
+    margin-top: 6px;
+  }
+
+  .wideMedia {
+    min-height: 200px;
+  }
+}

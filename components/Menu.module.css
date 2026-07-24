@@ -1,0 +1,135 @@
+.menu {
+  padding-block: var(--section);
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.head h2 {
+  max-width: 20ch;
+}
+
+.head .lede {
+  text-align: center;
+}
+
+/* ---------- Filtros ---------- */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: clamp(30px, 4vw, 46px);
+}
+
+.filter {
+  position: relative;
+  padding: 13px 30px;
+  border-radius: var(--r-pill);
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: var(--sh-1);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  transition: color 0.3s var(--ease), background-color 0.3s var(--ease);
+}
+
+.filter:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ink);
+}
+
+.filterOn {
+  color: var(--cream-hi);
+}
+
+.filterOn:hover {
+  color: var(--cream-hi);
+}
+
+.pill {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: var(--r-pill);
+  background: var(--roast);
+  box-shadow: var(--sh-2);
+}
+
+.filterLabel {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Grade ---------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(14px, 2vw, 26px);
+  margin-top: clamp(34px, 5vw, 56px);
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--sh-1);
+  transition: box-shadow 0.5s var(--ease), transform 0.5s var(--ease);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sh-3);
+}
+
+.cardFoot {
+  position: absolute;
+  inset: auto 12px 12px 12px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cardFoot .tag {
+  flex: 1;
+  text-align: center;
+}
+
+.price {
+  padding: 8px 14px;
+  border-radius: var(--r-pill);
+  background: rgba(43, 28, 18, 0.86);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--cream-hi);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter {
+    padding: 11px 22px;
+    font-size: 0.85rem;
+  }
+}

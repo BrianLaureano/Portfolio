@@ -1,0 +1,174 @@
+.bar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px var(--gutter);
+  pointer-events: none;
+}
+
+.bar > * {
+  pointer-events: auto;
+}
+
+.brand {
+  font-size: 0.98rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  mix-blend-mode: multiply;
+  transition: color 0.35s var(--ease);
+}
+
+/* Sobre o overlay escuro a barra inteira inverte */
+.barOpen .brand {
+  color: var(--cream-hi);
+  mix-blend-mode: normal;
+}
+
+.ctaOnDark {
+  background: rgba(251, 249, 245, 0.1);
+  color: var(--cream-hi);
+  box-shadow: inset 0 0 0 1px rgba(251, 249, 245, 0.22);
+}
+
+.ctaOnDark:hover {
+  background: rgba(251, 249, 245, 0.18);
+}
+
+.barOpen .burger {
+  background: rgba(251, 249, 245, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(251, 249, 245, 0.22);
+}
+
+.barOpen .burger:hover {
+  background: rgba(251, 249, 245, 0.2);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cta {
+  padding: 13px 26px;
+  font-size: 0.9rem;
+}
+
+.burger {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--roast);
+  box-shadow: var(--sh-2);
+  transition: background-color 0.3s var(--ease), transform 0.4s var(--ease);
+}
+
+.burger:hover {
+  background: var(--roast-hi);
+  transform: translateY(-2px);
+}
+
+.line {
+  position: absolute;
+  width: 17px;
+  height: 1.6px;
+  border-radius: 2px;
+  background: var(--cream-hi);
+  transition: transform 0.42s var(--ease);
+}
+
+.line:first-of-type {
+  transform: translateY(-3.5px);
+}
+
+.line:last-of-type {
+  transform: translateY(3.5px);
+}
+
+.lineTop {
+  transform: rotate(45deg) !important;
+}
+
+.lineBottom {
+  transform: rotate(-45deg) !important;
+}
+
+/* ---------- Overlay ---------- */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(40px, 7vh, 76px);
+  padding: 120px var(--gutter) 56px;
+  background: var(--roast);
+  color: var(--cream-hi);
+  overflow-y: auto;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Máscara: o link "sobe de dentro" da linha */
+.item {
+  overflow: hidden;
+  padding-block: 2px;
+}
+
+.link {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.2em;
+  font-family: var(--font-hand), cursive;
+  font-size: clamp(2.8rem, 9vw, 6.5rem);
+  line-height: 1.06;
+  transition: opacity 0.3s var(--ease);
+}
+
+.link:hover .arrow {
+  transform: translate(6px, -6px);
+}
+
+.arrow {
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.36em;
+  line-height: 1.4;
+  transition: transform 0.4s var(--ease);
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 28px;
+  max-width: 780px;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: rgba(251, 249, 245, 0.72);
+}
+
+.metaKey {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(251, 249, 245, 0.42);
+}
+
+@media (max-width: 560px) {
+  .cta {
+    display: none;
+  }
+}
